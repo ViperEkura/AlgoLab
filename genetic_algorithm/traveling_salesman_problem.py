@@ -211,8 +211,8 @@ def load_data():
 
 def plot_path(xy, path):
     """绘制路径图"""
-    xx = xy[path, 0]  # 路径经度序列
-    yy = xy[path, 1]  # 路径纬度序列
+    xx = xy[path + [0], 0]  # 路径经度序列
+    yy = xy[path + [0], 1]  # 路径纬度序列
     plt.plot(xx, yy, '-o')  # 绘制带标记点的路径线
     plt.show()
 
